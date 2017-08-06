@@ -32,7 +32,7 @@ function use_rhn() {
 function register_rhn() {
     # RHN_USERNAME=$1
     # RHN_PASSWORD=$2
-    retry subscription-manager register --username="$1" --password="$2"
+    retry subscription-manager register --username="$1" --password="$2" --force
 }
 
 function install_sat6_ca_certs() {
