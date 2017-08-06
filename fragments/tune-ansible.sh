@@ -49,3 +49,5 @@ set_ansible_configuration defaults \
                           "/tmp/ansible/facts"
 set_ansible_configuration defaults "fact_caching_timeout" "600"
 set_ansible_configuration defaults "fact_caching" "jsonfile"
+
+set_ansible_configuration defaults "roles_path" "/var/lib/ansible/playbooks/roles:/etc/ansible/roles:/var/lib/ansible/playbooks:/usr/share/ansible/openshift-ansible/roles"
