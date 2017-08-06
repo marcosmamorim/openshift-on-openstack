@@ -21,7 +21,8 @@ function sudo_enable_from_ssh() {
 function docker_set_storage_device() {
     # By default the cinder volume is mapped to virtio-first_20_chars of cinder
     # volume ID under /dev/disk/by-id/
-    devlink=/dev/disk/by-id/virtio-${1:0:20}
+    # TODO: Fix find devlink when we use hw_scsi_model as virtio-scsi and device name is prefixed by scsi-0QEMU_QEMU_HARDDISK_
+    devlink=/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_${1:0:20}
     docker_dev=""
     if ! [ -e "$devlink" ];then
         # It might be that disk is not present under /dev/disk/by-id/
