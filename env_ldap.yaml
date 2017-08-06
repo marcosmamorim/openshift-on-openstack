@@ -1,5 +1,8 @@
 parameter_defaults:
-    ldap_hostname: ldap.example.com
-    ldap_ip: 192.168.0.1
-    ldap_url: ldap://ldap.example.com:389/cn=users,cn=compat,dc=example,dc=com?uid
-    ldap_insecure: true
+   ldap_hostname: bastion.marcosmamorim.com.br
+   ldap_ip: 187.18.55.178
+   ldap_url: ldap://bastion.marcosmamorim.com.br/cn=users,cn=accounts,dc=idm,dc=marcosmamorim,dc=com,dc=br?uid?sub?(memberOf=cn=ose-users,cn=groups,cn=accounts,dc=idm,dc=marcosmamorim,dc=com,dc=br)
+   ldap_bind_dn: uid=admin,cn=users,cn=accounts,dc=idm,dc=marcosmamorim,dc=com,dc=br
+   ldap_bind_password: r3dh4t1!
+   ldap_preferred_username: uid
+   ldap_insecure: True

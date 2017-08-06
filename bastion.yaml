@@ -1,4 +1,4 @@
-heat_template_version: 2016-10-14
+heat_template_version: 2014-10-16
 
 
 description: >
@@ -176,7 +176,7 @@ parameters:
   timeout:
     description: Time to wait until the master setup is ready.
     type: number
-    default: 4000
+    default: 43200
 
   system_update:
     type: boolean
